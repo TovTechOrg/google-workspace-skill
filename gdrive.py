@@ -1,7 +1,7 @@
 """
 Google Workspace helper (Gmail + Drive).
 Replaces broken gmail-mcp / drive-mcp.
-Token saved at: C:\\Users\\meira\\.claude\\drive_token.json
+Token saved at: ~/.claude/drive_token.json
 Re-auth only needed if token is revoked.
 
 CLI usage:
@@ -39,8 +39,9 @@ from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload, MediaIoBaseDownload
 import io
 
-CLIENT_SECRET = r'C:\Users\meira\.claude\client secret.json'
-TOKEN_FILE    = r'C:\Users\meira\.claude\drive_token.json'
+_CLAUDE_DIR   = os.path.join(os.path.expanduser('~'), '.claude')
+CLIENT_SECRET = os.path.join(_CLAUDE_DIR, 'client secret.json')
+TOKEN_FILE    = os.path.join(_CLAUDE_DIR, 'drive_token.json')
 SCOPES = [
     'https://www.googleapis.com/auth/drive',
     'https://www.googleapis.com/auth/gmail.modify',

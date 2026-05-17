@@ -68,7 +68,7 @@ cp "<SOURCE_DIR>/gdrive.py" "/c/Users/$USERNAME/.claude/gdrive.py"
 
 3. Update the hardcoded paths inside gdrive.py to match this user's USERNAME:
    - Read the file
-   - Replace any occurrence of the old username (from meira or whatever is there) with the actual USERNAME in the CLIENT_SECRET and TOKEN_FILE lines
+   - Replace any occurrence of the old username (from whatever is there) with the actual USERNAME in the CLIENT_SECRET and TOKEN_FILE lines
    - Write the file back
 
 4. Copy the skill file:
